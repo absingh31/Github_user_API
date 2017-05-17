@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap-theme.min.css">
 </head>
 <body>
-<h1 class="text-center"> Github User Data API</h1>
+<h1 class="text-center"> Github User Data API </h1>
   <div class="col-lg-12">
       <style>
         .form-signin {
@@ -44,8 +44,6 @@
               </tr>
           </thead>
           <tbody>
-
-
           {% for key in data %}
               <tr>
                   <td>{{ key.id }}</td>
@@ -56,11 +54,15 @@
                   <td>{{ key.following }}</td>
               </tr>
           {% endfor %}
-
-
           </tbody>
           </table>
       </div>
     </div>
+<footer>
+  <p align="right" style="font-size: 20px">Designed by: Abhishek Singh</p>
+  <p align="right" style="font-size: 20px">Mail: <a style="font-size: 14px" href="mailto:absinghemail@gmail.com">
+  absinghemail@gmail.com</a></p>
+</footer>
 </body>
+
 </html>

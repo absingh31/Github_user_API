@@ -15,3 +15,6 @@ class User_info(models.Model):
     def Thumbnail(self):
         return '<img src="%s" width="30" height="30"/>' % self.image_for_thumbnail
     Thumbnail.allow_tags = True
+
+
+
