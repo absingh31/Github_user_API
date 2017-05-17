@@ -51,7 +51,7 @@ Default added = username - admin | password - Abcd@1234
 python manage.py runserver
 ```
 
-* Access http://127.0.0.1:8000/ on your browser to use the application.
+* Access http://127.0.0.1:8000/app on your browser to use the application.
 
 ### Usage
 

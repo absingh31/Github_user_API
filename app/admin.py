@@ -25,7 +25,7 @@ class report_for_month(User_info):
 
 class month(User_infoAdmin):
     def get_queryset(self, requests):
-        return self.model.objects.filter(date_searched__month__lte= datetime.datetime.today().month)
+        return self.model.objects.filter(date_searched__month__lte= datetime.datetime.today().month).exclude(date_searched__month__lt= ((datetime.datetime.today().month)-1)).filter(date_searched__year= datetime.datetime.today().year)
 
 class report_for_year(User_info):
     class Meta:
