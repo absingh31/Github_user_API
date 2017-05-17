@@ -10,7 +10,8 @@ class User_info(models.Model):
     followers = models.PositiveIntegerField()
     following = models.PositiveIntegerField()
     date_searched = models.DateField()
+    image_for_thumbnail = models.CharField(max_length=500, default='Well..')
 
-    def __unicode__(self): #Python2 declaration
-        return (str(self.name + str(self.user_id)))
-
+    def Thumbnail(self):
+        return '<img src="%s" width="30" height="30"/>' % self.image_for_thumbnail
+    Thumbnail.allow_tags = True

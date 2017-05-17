@@ -27,7 +27,7 @@ def index(request):
             data_into_table = User_info(user_id=jsonList[0]['id'], username=str(jsonList[0]['login']),name=str(jsonList[0]['name']),
                                         public_gists=jsonList[0]['public_gists'], public_repos=jsonList[0]['public_repos'],
                                         followers=jsonList[0]['followers'], following=jsonList[0]['following'],
-                                        date_searched=date.today())
+                                        image_for_thumbnail=jsonList[0]['avatar_url'], date_searched=date.today())
             data_into_table.save()
         parsedData.append(data)
     return render(request, 'app/profile.html', {'data': parsedData})
