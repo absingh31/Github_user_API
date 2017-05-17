@@ -1,5 +1,5 @@
 """
-WSGI config for Github_user_API project.
+WSGI config for demonstration project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
