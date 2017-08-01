@@ -59,16 +59,18 @@ python manage.py runserver
 
 ![Screenshot](/Pictures/api_page.png)
 
-<br /><br />
-* Access http://127.0.0.1:8000/admin on your browser for Admin panel and authenticate <br />
+
+* Access http://127.0.0.1:8000/admin on your browser for Admin panel and authenticate. <br />
 ![Screenshot](/Pictures/admin_home.png)
 
-<br />
+
 * Choose 'User_info' to access user data table to see all API calls.<br />
+
 ![Screenshot](/Pictures/user_table.png)
 
 <br />
 * Use Search bar to filter data according to fields given in table.<br />
+
 ![Screenshot](/Pictures/search_bar.png)
 
 

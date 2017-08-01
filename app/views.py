@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse
-import requests, datetime, json
+from django.shortcuts import render
+import json
+from urllib.request import urlopen
 from datetime import date
 from .models import User_info
 
@@ -7,8 +8,8 @@ def index(request):
     parsedData = []
     if request.method == 'POST':
         username, jsonList = request.POST.get('user'), []                #REQUIRED DECLARATIONS
-        req = requests.get('https://api.github.com/users/' + username)   #GET THE USER DATA
-        jsonList.append(json.loads(req.content))                         #MAKE LIST OF DATA
+        req = urlopen('https://api.github.com/users/' + username).read().decode('utf8')   #GET THE USER DATA
+        jsonList.append(json.loads(req))                         #MAKE LIST OF DATA
 
         for data in jsonList:
             #Applying changes to database for given API request, updating when a user's data is requested again
